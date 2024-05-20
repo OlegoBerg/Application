@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Application.Models.ContractViewModel>
+
+@{
+    ViewData["Title"] = "All Contracts";
+}
+
+<h2>All Contracts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Contract ID</th>
+            <th>Date</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contractViewModel in Model)
+        {
+            <tr>
+                <td>@contractViewModel.Contract.Id</td>
+                <td>@contractViewModel.Contract.Date.ToShortDateString()</td>
+                <td>@contractViewModel.TotalPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,23 @@
+﻿@model Application.Models.Contract
+
+<h1>Детали договора</h1>
+
+<p>
+    <strong>ID Договора:</strong> @Model.Id
+</p>
+<p>
+    <strong>Дата Договора:</strong> @Model.Date
+</p>
+
+<h2>Items</h2>
+<ul>
+    @foreach (var item in Model.Items)
+    {
+        <li>
+            <strong>Название:</strong> @item.Name <br />
+            <strong>Цена:</strong> @item.Price
+        </li>
+    }
+</ul>
+
+<a href="@Url.Action("Index", "Contract")">Вернуться в список договоров</a>

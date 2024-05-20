@@ -1,0 +1,37 @@
+﻿    @model Application.Models.Contract
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Contract</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+
+<form method="post" action="/Contract/Create">
+    <label for="contractId">Номер договора:</label><br />
+    <input type="text" id="contractId" name="Id" /><br />
+
+    <label for="contractDate">Дата контракта:</label><br />
+    <input type="date" id="contractDate" name="Date" /><br />
+
+    <div id="items">
+        <!— создать поле с услугой —>
+    </div>
+
+    <button type="button" id="addItem">Добавить позицию</button>
+
+    <button type="submit">Создать договор</button>
+</form>
+
+<p>View all documents:</p>
+<a href="/ViewResult/ShowAllContracts">View All Documents</a>
+
+
+<script src="~/js/addItem.js"></script>
+<script src="~/js/validateContractId.js"></script>
+
+    </body>
+    </html>

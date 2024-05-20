@@ -1,0 +1,26 @@
+﻿@using Application.Models;
+@model IEnumerable<Application.Models.ContractViewModel>
+
+@{
+    ViewData["Title"] = "All Contracts";
+}
+
+<h1>All Contracts</h1>
+
+<ul>
+@foreach (var contractViewModel in Model)
+{
+        <li>
+            <a href="@Url.Action("Details", "ContractDetails", new { id = contractViewModel.Contract.Id })">
+                Contract ID: @contractViewModel.Contract.Id
+            </a>, 
+            Date: @contractViewModel.Contract.Date, Total Price: @contractViewModel.TotalPrice
+        </li>
+    <ul>
+        @foreach (var item in contractViewModel.Contract.Items)
+        {
+            <li>Item: @item.Name, Price: @item.Price</li>
+        }
+    </ul>
+}
+</ul>

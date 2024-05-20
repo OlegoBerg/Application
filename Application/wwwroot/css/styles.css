@@ -1,0 +1,26 @@
+﻿/* Заголовок */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Осн. часть */
+main {
+    padding: 20px;
+}
+
+/* Футтер */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.is-invalid {
+    border-color: #dc3545 !important; /* Цвет рамки красный */
+}
